@@ -26,6 +26,11 @@ button { background: none; border: none; cursor: pointer; }
 
 ::selection { background-color: var(--color-accent-soft); color: var(--color-accent); }
 
+/* Keep anchored sections clear of the sticky header. */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

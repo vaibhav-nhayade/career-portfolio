@@ -12,3 +12,24 @@
   animation: fade-up var(--duration-slow) var(--ease-out) both;
   animation-delay: var(--delay, 0ms);
 }
+
+/* Scroll-triggered reveal for sections below the fold (see useIntersectionReveal). */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -2,11 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Apply the saved or system theme before first paint to avoid a flash. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('vn-portfolio-theme');
+          var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved === 'light' || saved === 'dark' ? saved : dark ? 'dark' : 'light';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {}
+      })();
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Vaibhav Nhayade — B.Tech AI & Data Science student. Portfolio of projects, experience, and learning in artificial intelligence and data science." />
-    <meta name="theme-color" content="#FAFAF9" />
+
+    <!-- Primary SEO -->
     <title>Vaibhav Nhayade — AI & Data Science Student</title>
+    <meta name="description" content="Vaibhav Nhayade — B.Tech AI & Data Science student. Portfolio of projects, experience, and learning in artificial intelligence, machine learning, and data science." />
+    <meta name="author" content="Vaibhav Nhayade" />
+    <meta name="keywords" content="Vaibhav Nhayade, AI, Data Science, Machine Learning, Portfolio, Python" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FAFAF9" />
+
+    <!-- Open Graph / social previews. Set og:url and og:image to absolute URLs once the site has a domain. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vaibhav Nhayade" />
+    <meta property="og:title" content="Vaibhav Nhayade — AI & Data Science Student" />
+    <meta property="og:description" content="Projects, experience, and learning in AI and data science." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vaibhav Nhayade — AI & Data Science Student" />
+    <meta name="twitter:description" content="Projects, experience, and learning in AI and data science." />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vaibhav Nhayade",
+        "jobTitle": "B.Tech AI & Data Science Student",
+        "description": "AI and data science student focused on machine learning, data-driven problem solving, and practical projects.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jalgaon",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Data Science"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

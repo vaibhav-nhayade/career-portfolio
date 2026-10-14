@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react'
-import { SiGithub, SiLeetcode, SiCodeforces, SiCodechef } from 'react-icons/si'
 import { personal } from '../../data/personal.js'
-import { socialLinks } from '../../data/socialLinks.js'
+import Navigation from './Navigation.jsx'
+import SocialLinks from './SocialLinks.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 import './Header.css'
-
-const PLATFORMS = [
-  { key: 'github', label: 'GitHub', Icon: SiGithub, url: socialLinks.github },
-  { key: 'leetcode', label: 'LeetCode', Icon: SiLeetcode, url: socialLinks.leetcode },
-  { key: 'codeforces', label: 'Codeforces', Icon: SiCodeforces, url: socialLinks.codeforces },
-  { key: 'codechef', label: 'CodeChef', Icon: SiCodechef, url: socialLinks.codechef },
-]
 
 function DownloadIcon() {
   return (
@@ -22,25 +16,6 @@ function DownloadIcon() {
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
-
-function PlatformLink({ label, Icon, url }) {
-  const commonProps = {
-    className: `icon-link${url ? '' : ' icon-link--disabled'}`,
-    'aria-label': url ? label : `${label} — coming soon`,
-    title: url ? label : `${label} — coming soon`,
-  }
-  const iconEl = <Icon size={16} aria-hidden="true" />
-
-  if (!url) {
-    return <span {...commonProps}>{iconEl}</span>
-  }
-
-  return (
-    <a {...commonProps} href={url} target="_blank" rel="noreferrer noopener">
-      {iconEl}
-    </a>
   )
 }
 
@@ -73,20 +48,26 @@ function Header() {
   }, [])
 
   const handleBrandClick = () => {
-    document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
     <header className={`site-header${scrolled ? ' site-header--scrolled' : ''}`}>
       <div className="site-header__inner">
-        <button type="button" className="site-header__brand" onClick={handleBrandClick}>
+        <button
+          type="button"
+          className="site-header__brand"
+          onClick={handleBrandClick}
+          aria-label="Back to top"
+        >
           VN.
         </button>
 
+        <Navigation />
+
         <div className="site-header__actions">
-          {PLATFORMS.map(({ key, label, Icon, url }) => (
-            <PlatformLink key={key} label={label} Icon={Icon} url={url} />
-          ))}
+          <SocialLinks />
+          <ThemeToggle />
           <ResumeButton />
         </div>
       </div>

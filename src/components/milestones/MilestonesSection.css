@@ -1,0 +1,114 @@
+.milestones {
+  width: 100%;
+  padding: var(--space-16) var(--gutter);
+  background: var(--color-bg);
+}
+
+.milestone-timeline {
+  position: relative;
+  max-width: 760px;
+  list-style: none;
+  padding: 0 0 0 var(--space-8);
+  margin: 0;
+}
+
+/* Vertical rail connecting the markers. */
+.milestone-timeline::before {
+  content: '';
+  position: absolute;
+  top: var(--space-2);
+  bottom: var(--space-2);
+  left: 7px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent), var(--color-border-strong));
+  border-radius: var(--radius-full);
+}
+
+.milestone-timeline__item {
+  position: relative;
+  padding-bottom: var(--space-8);
+}
+
+.milestone-timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.milestone-timeline__empty {
+  color: var(--color-ink-faint);
+}
+
+.milestone-card {
+  position: relative;
+}
+
+.milestone-card__dot {
+  position: absolute;
+  top: 6px;
+  left: calc(-1 * var(--space-8) + 0px);
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-bg);
+}
+
+.milestone-card__dot--upcoming {
+  background: var(--color-bg);
+  border: 2px dashed var(--color-accent);
+}
+
+.milestone-card__content {
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.milestone-card:hover .milestone-card__content {
+  border-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.milestone-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.milestone-card__date {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.milestone-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+}
+
+.milestone-card__description {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+@media (max-width: 640px) {
+  .milestones {
+    padding: var(--space-12) var(--gutter);
+  }
+
+  .milestone-timeline {
+    padding-left: var(--space-6);
+  }
+
+  .milestone-card__dot {
+    left: calc(-1 * var(--space-6));
+  }
+}

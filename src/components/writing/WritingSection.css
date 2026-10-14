@@ -1,0 +1,102 @@
+.writing {
+  width: 100%;
+  padding: var(--space-16) var(--gutter);
+  background: var(--color-bg-sunken);
+}
+
+.writing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-10);
+}
+
+.writing__heading {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+}
+
+.writing__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.writing__empty {
+  padding: var(--space-5);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-ink-faint);
+}
+
+.writing-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.writing-card--link:hover {
+  border-color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+.writing-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.writing-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  flex: 1;
+}
+
+.writing-card__title {
+  font-weight: var(--font-semibold);
+  color: var(--color-ink);
+}
+
+.writing-card__meta {
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.writing-card__summary {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.writing-card__arrow {
+  flex-shrink: 0;
+  color: var(--color-ink-faint);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.writing-card--link:hover .writing-card__arrow {
+  color: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .writing {
+    padding: var(--space-12) var(--gutter);
+  }
+}

@@ -6,7 +6,7 @@ function ContactInfo() {
   return (
     <aside className="contact-info" aria-label="Contact details">
       <p className="contact-info__lead">
-        Based in {personal.city}. I'm happy to talk about AI, data science, or anything you're building.
+        Based in {personal.city}. I'm happy to connect with you.
       </p>
 
       <ul className="contact-info__list">

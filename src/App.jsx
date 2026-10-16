@@ -3,6 +3,7 @@ import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import HeroSection from './components/hero/HeroSection.jsx'
 import AboutSection from './components/about/AboutSection.jsx'
+import ResumeSection from './components/resume/ResumeSection.jsx'
 import ExperienceSection from './components/experience/ExperienceSection.jsx'
 import ProjectsSection from './components/projects/ProjectsSection.jsx'
 import SkillsSection from './components/skills/SkillsSection.jsx'
@@ -23,6 +24,9 @@ function App() {
         <HeroSection />
         <div data-reveal>
           <AboutSection />
+        </div>
+        <div data-reveal>
+          <ResumeSection />
         </div>
         <div data-reveal>
           <ExperienceSection />

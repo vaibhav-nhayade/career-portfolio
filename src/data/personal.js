@@ -1,5 +1,6 @@
 export const personal = {
   name: 'Vaibhav Nhayade',
+  fullName: 'Vaibhav Ravindra Nhayade',
   role: 'B.Tech AI & Data Science Student',
 
   welcomeIntro:
@@ -13,16 +14,15 @@ export const personal = {
   city: 'Jalgaon, Maharashtra',
   dob: '21 Oct 2005',
 
-  // Placeholder graphic until a real photo is provided — just replace
-  // the file at public/images/profile/ and update this path.
-  profileImage: '/images/profile/profile-placeholder.svg',
+  // Your profile photo. Saved as public/images/profile/profile.png
+  profileImage: '/images/profile/profile.png',
 
   // Not yet provided — never invented. Renders as a clearly marked
   // placeholder in the About section until real copy is supplied.
   aboutBio: null,
 
-  // Placeholder — replace once the PDF is ready; never invented in the meantime
-  resumeUrl: null,
+  // Your resume PDF. Saved as public/resume/resume.pdf
+  resumeUrl: '/resume/resume.pdf',
 
   email: null,
 }

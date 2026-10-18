@@ -7,7 +7,7 @@
   isolation: isolate;
   border-radius: 20px;
   color: #FFFFFF;
-  background: linear-gradient(135deg, #1B2670 0%, #3654F0 48%, #1FB6CF 100%);
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #38BDF8 100%);
   box-shadow:
     0 28px 50px -22px rgba(27, 38, 112, 0.6),
     inset 0 0 0 1px rgba(255, 255, 255, 0.14);

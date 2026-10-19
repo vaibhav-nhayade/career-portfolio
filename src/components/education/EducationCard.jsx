@@ -11,9 +11,7 @@ function EducationCard({ item }) {
       <div className="education-card__content">
         <div className="education-card__header">
           <h3 className="education-card__degree">{item.degree}</h3>
-          <Badge tone="accent">
-            {item.startYear} — {item.endYear}
-          </Badge>
+          <Badge tone="accent">{item.period}</Badge>
         </div>
 
         <p className="education-card__institution">{item.institution}</p>
@@ -22,7 +20,7 @@ function EducationCard({ item }) {
           {item.location}
         </p>
 
-        <p className="education-card__summary">{item.summary}</p>
+        {item.summary && <p className="education-card__summary">{item.summary}</p>}
 
         {item.highlights.length > 0 && (
           <ul className="education-card__highlights">

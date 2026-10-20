@@ -1,5 +1,4 @@
 import { useIntersectionReveal } from './hooks/useIntersectionReveal.js'
-import BackgroundFx from './components/layout/BackgroundFx.jsx'
 import ScrollProgress from './components/layout/ScrollProgress.jsx'
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <>
-      <BackgroundFx />
       <ScrollProgress />
       <Header />
       <main>

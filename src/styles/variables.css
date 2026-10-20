@@ -1,26 +1,29 @@
 :root {
-  /* ---- Color: surfaces ---- */
-  --color-bg: #F5F6FA;
-  --color-bg-elevated: #FFFFFF;
-  --color-bg-sunken: #ECEEF4;
+  /* ---- Color: surfaces (light yellow theme) ---- */
+  --color-bg: #FFFBEA;
+  --color-bg-elevated: #FFFEF7;
+  --color-bg-sunken: #FFF1B8;
 
   /* ---- Color: ink (text) ---- */
-  --color-ink: #14161A;
-  --color-ink-muted: #5B6169;
-  --color-ink-faint: #9AA0A8;
+  --color-ink: #111111;
+  --color-ink-muted: #3A3A2E;
+  --color-ink-faint: #6B6A5A;
   --color-ink-on-accent: #FFFFFF;
 
-  /* ---- Color: accent (single, deliberate) ---- */
+  /* ---- Color: accent ---- */
   --color-accent: #3654F0;
   --color-accent-hover: #2B44D0;
-  --color-accent-soft: #EEF1FF;
+  --color-accent-soft: #FFEFA8;
 
-  /* ---- Color: borders ---- */
-  --color-border: #E0E2E9;
-  --color-border-strong: #CFD2DC;
+  /* ---- Color: borders (dark black) ---- */
+  --color-border: #111111;
+  --color-border-strong: #111111;
 
   /* ---- Color: background grid texture ---- */
-  --color-grid-line: rgba(20, 22, 26, 0.055);
+  --color-grid-line: rgba(17, 17, 17, 0.06);
+
+  /* ---- Color: sticky header ---- */
+  --color-header-bg: rgba(255, 251, 234, 0.85);
 
   /* ---- Typography: families ---- */
   --font-sans: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -70,9 +73,9 @@
   --radius-full: 999px;
 
   /* ---- Shadow ---- */
-  --shadow-sm: 0 1px 2px rgba(20, 22, 26, 0.04);
-  --shadow-md: 0 4px 16px rgba(20, 22, 26, 0.06);
-  --shadow-lg: 0 16px 40px rgba(20, 22, 26, 0.10);
+  --shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.08);
+  --shadow-md: 0 4px 16px rgba(17, 17, 17, 0.1);
+  --shadow-lg: 0 16px 40px rgba(17, 17, 17, 0.16);
 
   /* ---- Motion ---- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -85,6 +88,7 @@
   --gutter: clamp(1.25rem, 4vw, 4rem);
 }
 
+/* Dark theme: unchanged from before */
 [data-theme='dark'] {
   --color-bg: #101114;
   --color-bg-elevated: #17181C;
@@ -102,9 +106,9 @@
   --color-border: #26282E;
   --color-border-strong: #34363D;
   --color-grid-line: rgba(243, 243, 241, 0.05);
+  --color-header-bg: rgba(16, 17, 20, 0.72);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
-

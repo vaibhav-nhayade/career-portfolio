@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { personal } from '../../data/personal.js'
 import Navigation from './Navigation.jsx'
-import SocialLinks from './SocialLinks.jsx'
 import ThemeToggle from './ThemeToggle.jsx'
 import './Header.css'
 
@@ -66,7 +65,6 @@ function Header() {
         <Navigation />
 
         <div className="site-header__actions">
-          <SocialLinks />
           <ThemeToggle />
           <ResumeButton />
         </div>

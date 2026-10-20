@@ -1,6 +1,7 @@
 import { useIntersectionReveal } from './hooks/useIntersectionReveal.js'
 import ScrollProgress from './components/layout/ScrollProgress.jsx'
 import Header from './components/layout/Header.jsx'
+import SocialBar from './components/layout/SocialBar.jsx'
 import Footer from './components/layout/Footer.jsx'
 import HeroSection from './components/hero/HeroSection.jsx'
 import AboutSection from './components/about/AboutSection.jsx'
@@ -22,6 +23,7 @@ function App() {
     <>
       <ScrollProgress />
       <Header />
+      <SocialBar />
       <main>
         <HeroSection />
         <div data-reveal>

@@ -1,0 +1,11 @@
+.social-bar {
+  width: 100%;
+  padding: var(--space-5) var(--gutter);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+
+.social-bar__inner {
+  display: flex;
+  justify-content: center;
+}

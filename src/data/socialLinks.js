@@ -1,13 +1,11 @@
 /**
- * External profile links — single source of truth.
- * Each value is either a real URL or null. When null, the UI shows
- * the icon in a disabled "coming soon" state rather than hiding it
- * or linking somewhere fake — never invent a URL here.
+ * Social profile links. Set a URL to show the icon as a link.
+ * Set it to null to show the icon as "coming soon".
  */
 export const socialLinks = {
-  github: null,
-  leetcode: null,
-  codeforces: null,
-  codechef: null,
-  linkedin: null,
+  github: 'https://github.com/vaibhav-nhayade',
+  linkedin: 'https://www.linkedin.com/in/vaibhav-nhayade',
+  leetcode: 'https://leetcode.com/u/vaibhav_nhayade/',
+  codeforces: 'https://codeforces.com/profile/vaibhav_nhayade',
+  kaggle: 'https://www.kaggle.com/nhayadevaibhav',
 }

@@ -24,5 +24,5 @@ export const personal = {
   // Your resume PDF. Saved as public/resume/resume.pdf
   resumeUrl: '/resume/resume.pdf',
 
-  email: null,
+  email: 'vaibhavnhayade21@gmail.com',
 }

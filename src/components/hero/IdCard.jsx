@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { QRCodeSVG } from 'qrcode.react'
 import { personal } from '../../data/personal.js'
 import './IdCard.css'
 
@@ -7,6 +8,11 @@ const RESET_TRANSFORM = 'perspective(900px) rotateX(0deg) rotateY(0deg) translat
 function IdCard() {
   const cardRef = useRef(null)
   const reducedMotionRef = useRef(false)
+
+  // Opens a new email to you. The QR code encodes the same link, so scanning it does the same thing.
+  const mailtoLink = personal.email
+    ? `mailto:${personal.email}?subject=${encodeURIComponent('Hello Vaibhav, I saw your portfolio')}`
+    : null
 
   useEffect(() => {
     reducedMotionRef.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -19,7 +25,6 @@ function IdCard() {
     const px = (e.clientX - rect.left) / rect.width
     const py = (e.clientY - rect.top) / rect.height
 
-    // The light follows the pointer across the card.
     card.style.setProperty('--glare-x', `${px * 100}%`)
     card.style.setProperty('--glare-y', `${py * 100}%`)
 
@@ -40,9 +45,7 @@ function IdCard() {
       <div className="student-id__glare" aria-hidden="true" />
 
       <header className="student-id__header">
-        <span className="student-id__tag">AI · DS</span>
         <span className="student-id__title">Digital ID Card</span>
-        <span className="student-id__tag">Student</span>
       </header>
 
       <div className="student-id__body">
@@ -81,7 +84,15 @@ function IdCard() {
 
       <footer className="student-id__footer">
         <span className="student-id__tagline">{personal.footerTagline}</span>
-        <span className="student-id__holo" aria-hidden="true" />
+
+        {mailtoLink && (
+          <a className="student-id__qr" href={mailtoLink} aria-label={`Email ${personal.name}`}>
+            <span className="student-id__qr-code">
+              <QRCodeSVG value={mailtoLink} size={60} level="M" bgColor="#FFFFFF" fgColor="#111111" />
+            </span>
+            <span className="student-id__qr-label">Scan to email me</span>
+          </a>
+        )}
       </footer>
     </div>
   )

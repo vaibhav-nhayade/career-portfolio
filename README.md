@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio
 
-Welcome to my personal portfolio! 🚀
+Welcome to my personal portfolio! 
 
 This website showcases my skills, projects, and journey as a developer.
 

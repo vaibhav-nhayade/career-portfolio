@@ -4,7 +4,7 @@ Welcome to my personal portfolio!
 
 This website showcases my skills, projects, and journey as a developer.
 
-### ✨ Features
+### Features
 - About Me
 - Skills & Technologies
 - Projects

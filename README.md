@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! 
 
-This website showcases my skills, projects, and journey as a developer.
+This website showcases my skills, projects, and journey as a developer
 
 ### Features
 - About Me

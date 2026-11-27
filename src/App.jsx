@@ -21,9 +21,6 @@ function App() {
 
   return (
     <>
-      <ScrollProgress />
-      <Header />
-      <SocialBar />
       <main>
         <HeroSection />
         <div data-reveal>

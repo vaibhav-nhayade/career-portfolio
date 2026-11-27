@@ -20,7 +20,11 @@ function App() {
   useIntersectionReveal()
 
   return (
-    <>
+    <> 
+      <ScrollProgress />
+      <Header />
+      <SocialBar />
+      
       <main>
         <HeroSection />
         <div data-reveal>

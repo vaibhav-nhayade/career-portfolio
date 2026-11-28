@@ -4,7 +4,11 @@
   background: var(--color-bg-sunken);
 }
 
-
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-10);
+  align-items: start;
 }
 
 .contact-info {
